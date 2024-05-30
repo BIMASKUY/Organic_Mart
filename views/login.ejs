@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>signUp & login page</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    
+    <%if(messages.error){ %>
+        <script>
+            Swal.fire({
+                title: "<%= messages.error %>",
+                html: "Incorrect Email Or Password",
+                icon: "error"
+            });
+        </script>
+    <% } %>
+
+    <%if(invalidMessage.length > 0){ %>
+        <script>
+            Swal.fire({
+                title: "<%=invalidMessage[0]%>",
+                html: "<% for(let i=1; i<invalidMessage.length; i++) { %> <%=invalidMessage[i] %><br><% } %>",
+                icon: "error"
+            });
+        </script>
+    <% } %>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="/signUp" method="post">
+                <h1>Create Account</h1>
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="password" name="password" placeholder="Password">
+                <input type="text" name="name" placeholder="Name" autocomplete="off">
+                <input type="text" name="phone" placeholder="Phone Number" autocomplete="off">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="/login" method="post">
+                <h1>Login</h1>
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="password" name="password" placeholder="Password">
+                <a href="#" id="forgetPassword">Forget Your Password?</a>
+                <button>Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Have An Account?</h1>
+                    <p>Login Now!</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>First Time?</h1>
+                    <p>Register Now!</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                    <a href="/" class="halo" style="color: white;">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

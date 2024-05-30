@@ -1,0 +1,92 @@
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Add Product</h1>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Checkout Page Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Add Product</h1>
+        <form action="/addProduct" method="post" enctype="multipart/form-data">
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-6 col-xl-7">
+                    <div class="form-item">
+                        <label class="form-label my-3">Name <sup>*</sup></label>
+                        <input class="form-control" type="text" name="name" autocomplete="off" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label class="form-label my-3">Category <sup>*</sup></label>
+                        <td colspan="3" class="py-5">
+                            <div id="choiceCategory">
+                                <div class="form-check text-start">
+                                    <input type="radio" class="form-check-input bg-primary border-0" id="Shipping-1" name="category" value="fruit" required>
+                                    <label class="form-check-label" for="Shipping-1">Fruit</label>
+                                </div>
+                                <div class="form-check text-start">
+                                    <input type="radio" class="form-check-input bg-primary border-0" id="Shipping-2" name="category" value="vegetable" required>
+                                    <label class="form-check-label" for="Shipping-2">Vegetable</label>
+                                </div>
+                                <div class="form-check text-start">
+                                    <input type="radio" class="form-check-input bg-primary border-0" id="Shipping-3" name="category" value="meat" required>
+                                    <label class="form-check-label" for="Shipping-3">Meat</label>
+                                </div>
+                            </div>
+                        </td>
+                    </div>
+
+                    <div class="form-item">
+                        <label class="form-label my-3">Price <sup>*</sup></label>
+                        <input type="number" class="form-control" name="price" autocomplete="off" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Quantity <sup>*</sup></label>
+                        <input type="number" class="form-control" name="quantity" autocomplete="off" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Weight <sup></sup></label>
+                        <div class="d-flex">
+                            <input type="number" class="form-control me-3" name="weight" autocomplete="off" required>
+                            <select class="form-select" name="unit">
+                                <option value="g">g</option>
+                                <option value="kg">kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Exp Date <sup>*</sup></label>
+                        <input type="date" class="form-control" name="exp" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Location <sup>*</sup></label>
+                        <input type="text" class="form-control" name="location" autocomplete="off" required>
+                    </div>
+                    <hr>
+                    <div class="form-item">
+                        <textarea name="description" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="table-responsive">
+                        <div class="border border-primary rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="" class="img-fluid w-100 rounded-top" id="imgPreview">
+                            </div>
+                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;" id="categoryPreview"></div>
+
+                            <div class="p-4 rounded-bottom text-md-end">
+                                <input type="file" name="namaFile" accept="image/*" id="imageUpload" class="btn border border-secondary rounded-pill px-3 text-primary" required>
+                                <i class="fa fa-shopping-bag me-2 text-primary">Upload Image</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                        <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Add Product</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Checkout Page End -->

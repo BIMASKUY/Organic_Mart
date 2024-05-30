@@ -1,0 +1,99 @@
+<!-- Event Error After Post -->
+<% if(invalidMessage.length > 0){ %>
+    <script>
+        Swal.fire({
+            title: "Error",
+            html: "<% for(let i=0; i<invalidMessage.length; i++) { %> <%=invalidMessage[i] %><br><% } %>",
+            icon: "error"
+        });
+    </script>
+<% } %>
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Cart Detail</h1>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Single Product Start -->
+<div class="container-fluid py-5 mt-5">
+    <div class="container py-5">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-8 col-xl-9">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="border rounded">
+                            <img src="/img/<%=result.filename%>" class="img-fluid rounded" alt="Image">
+                        </div>
+                    </div>
+                    <form action="/cart/<%=result.idcart%>" method="post" class="col-lg-6">
+                        <input type="hidden" name="stock" value="<%=result.quantity%>">
+                        <input type="hidden" name="idcart" value="<%=result.idcart%>">
+                        <h4 class="fs-1 fw-bold mb-3"><%=result.name%></h4>
+                        <p class="fs-5 mb-3">Category: <%=result.category%></p>
+                        <h5 class="fs-2 fw-bold mb-3">Rp<%=result.price%></h5>
+                        <p class="fs-5 mb-4"><%=result.sellername%></p>
+                        <p class="fs-3 fw-bold mb-4"><%=result.quantity%> Available</p>
+                        <div class="input-group quantity mb-5" style="width: 100px;">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text" name="quantity" class="form-control form-control-sm text-center border-0" value="<%= result.orderquantity %>">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Save</button>
+                    </form>
+                    <div class="col-lg-12">
+                        <div class="nav nav-tabs mb-3">
+                            <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
+                                id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
+                                aria-controls="nav-about" aria-selected="true">Description</button>
+                        </div>
+                        <div class="tab-content mb-5">
+                            <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                <p><%=result.description%></p>
+                                <div class="px-2">
+                                    <div class="row g-4">
+                                        <div class="col-6">
+                                            <div class="row bg-light align-items-center text-center justify-content-center py-2">
+                                                <div class="col-6">
+                                                    <p class="mb-0">Weight</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="mb-0"><%=result.weight%> <%=result.unit%></p>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center align-items-center justify-content-center py-2">
+                                                <div class="col-6">
+                                                    <p class="mb-0">Exp Date</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="mb-0"><%=result.exp%></p>
+                                                </div>
+                                            </div>
+                                            <div class="row bg-light text-center align-items-center justify-content-center py-2">
+                                                <div class="col-6">
+                                                    <p class="mb-0">Location</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="mb-0"><%=result.location%></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Single Product End -->

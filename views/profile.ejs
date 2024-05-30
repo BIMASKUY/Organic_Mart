@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <% if(invalidMessage.length > 0) { %>
+        <script>
+            Swal.fire({
+                title: "Invalid Input",
+                text: "<%= invalidMessage %>",
+                icon: "error"
+            });
+        </script>
+    <% } %>
+
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form action="/editProfile" method="post">
+                <h1>Profile</h1>
+                <input type="email" name="email" value="<%=email%>" disabled>
+                <input type="password" name="password" placeholder="New Password">
+                <input type="text" name="name" placeholder="New Name" value="<%=name%>">
+                <input type="text" name="phone" placeholder="New Phone Number" value="<%=phone%>">
+                <button>Save Profile</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Logout?</h1>
+                    <form action="/logout" method="post" style="background-color: transparent; ">
+                        <button class="hidden">Logout</button> 
+                    </form>
+                    <!-- <a href="" class="halo" style="color: white;">Sign Out</a> -->
+                    <a href="/" class="halo" style="color: white;">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

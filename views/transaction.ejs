@@ -1,0 +1,118 @@
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Transaction</h1>
+        </div>
+        <!-- Single Page Header End -->
+
+
+        <!-- Cart Page Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-center">Product</th>
+                            <th scope="col" class="text-center">Name</th>
+                            <th scope="col" class="text-center">Action</th>
+                            <th scope="col" class="text-center">Date Transaction</th>
+                            <th scope="col" class="text-center">Date COD</th>
+                            <th scope="col" class="text-center">Price</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-center">Total Price</th>
+                            <th scope="col" class="text-center">Link Product</th>
+                            <th scope="col" class="text-center">Address</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i=0; i<result.length; i++){ %>
+                            <tr>
+                                <td class="d-flex align-items-center justify-content-center">
+                                    <img src="img/<%= result[i].filename %>" class="img-fluid rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4"><%= result[i].nameproduct %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4"><%= result[i].action %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4"><%= result[i].date_transaction %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4"><%= result[i].date_cod %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4">Rp<%= result[i].price.toLocaleString('de-DE') %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4"><%= result[i].quantity %></p>
+                                </td>
+                                <td class="text-center">
+                                    <p class="mb-0 mt-4">Rp<%= (result[i].price * result[i].quantity).toLocaleString('de-DE') %></p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="/shop/<%= result[i].id_product %>" class="btn btn-md rounded-circle bg-light border mt-4" >
+                                        <i class="bi bi-link-45deg text-primary" ></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-index="<%= i %>">
+                                        Detail
+                                    </button>                                                                     
+                                </td>
+                            </tr>
+                            
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Cart Page End -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Insert Element -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+ </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const result = JSON.parse('<%- JSON.stringify(result) %>')
+    
+        const buttons = document.querySelectorAll('.btn-primary');
+        buttons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+
+                if (index !== null) {
+                    const obj = result[index];
+                    const modal = document.querySelector('#exampleModal');
+
+                    modal.querySelector('.modal-title').innerText = obj.nameproduct;
+                    const namePopup = (obj.action === 'Buy') ? 'Seller Name: ' : 'Buyer Name: ' 
+                    modal.querySelector('.modal-body').innerHTML = '<p>' + namePopup + obj.nameother + '</p>' +
+                                                                   '<p>Province: ' + obj.province + '</p>' +
+                                                                   '<p>City: ' + obj.city + '</p>' +
+                                                                   '<p>Street: ' + obj.street + '</p>' +
+                                                                   '<p>Notes: ' + obj.notes + '</p>';
+                }
+            })
+        })
+    })
+</script>
+    
