@@ -110,14 +110,19 @@ Aplikasi Berbasis Web Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian O
 
 #### 1. Dokumentasi Kode
 
-![ezgif com-optimize](https://github.com/BIMASKUY/Resep_Emak/assets/113542041/b7b28d43-1f44-4d19-a2d2-2435054d798a)
-
+![kode (1)](https://github.com/BIMASKUY/Organic_Mart/assets/113542041/9337c059-e1b7-404c-9420-59623cc85b5b)
 
 #### 2. Dokumentasi SQL
 
-<img width="770" alt="image" src="https://github.com/BIMASKUY/Resep_Emak/assets/113542041/115090d9-9bc7-4a06-a0cc-8ad44d94edc3">
+<img width="692" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/77d69552-1047-4855-b731-071dc985aa9e">
+
+<img width="962" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/e3ebf92d-2d28-42db-abcb-530277672588">
+
+<img width="741" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/36bfd421-ea2f-4ab3-9b8e-e7771ce112a5">
 
 ---
 
+
+
 ## Link Laporan
-[![Go To](https://github.com/BIMASKUY/Resep_Emak/assets/113542041/3950c946-a3ad-4fd8-8931-4099f9c180b3)](https://docs.google.com/document/d/1lPFLhD2SKVMhlRTeud0-L_YUBFxo7DURe5aFbQ--1Yw/edit)
+[![Go To](https://github.com/BIMASKUY/Organic_Mart/assets/113542041/dd889660-ff42-4cdb-8732-b8c8a2b4fbeb)](https://docs.google.com/document/d/13TNKIvDiN4zf53xSkyGu4ouvHnoydFvfPLjRHwj7vqg/edit)
