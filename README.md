@@ -74,11 +74,11 @@ Aplikasi Berbasis Web Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian O
 
 #### 8. Cart
 
-<img width="942" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/0e078253-56de-4438-b34c-c68c5009bf50">
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/0e078253-56de-4438-b34c-c68c5009bf50">
 
 #### 9. Edit Cart
 
-<img width="1276" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/45a72e35-6ec8-4039-ab10-f78c4599f087">
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/45a72e35-6ec8-4039-ab10-f78c4599f087">
 
 #### 10. Checkout
 
