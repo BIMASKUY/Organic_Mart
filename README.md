@@ -1,6 +1,6 @@
-# Projek Rekayasa Perangkat Lunak `Organic Mart`
+# Projek Rekayasa Perangkat Lunak `OrganicMart`
 
-<img width="1196" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/3c7be2f0-2adb-4cf3-bdcb-970ad2d33874">
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/3c7be2f0-2adb-4cf3-bdcb-970ad2d33874">
 <br></br>
 
 > `OrganicMart` - Organic Veggies, Fruit Foods, & Fresh Meat
@@ -46,11 +46,11 @@ Website Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian Organik Langsun
 
 #### 1. Halaman Utama
 
-![halaman utama](https://github.com/BIMASKUY/Organic_Mart/assets/113542041/afc7251f-d525-41a4-95da-a36dd0c70f21)
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/afc7251f-d525-41a4-95da-a36dd0c70f21">
 
 #### 2. Contact
 
-<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/d6cfdc5f-801c-4e93-8be9-d45a689801e6)">
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/d6cfdc5f-801c-4e93-8be9-d45a689801e6">
 
 #### 3. Sign Up
 
@@ -90,7 +90,7 @@ Website Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian Organik Langsun
 
 #### 12. Transaction History (Click Detail Button)
 
-<img width="1280" alt="transaction_detail" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/2c9a0f21-1dbc-4ac1-a6f0-3edbbde838c5">
+<img width="1280" alt="image" src="https://github.com/BIMASKUY/Organic_Mart/assets/113542041/2c9a0f21-1dbc-4ac1-a6f0-3edbbde838c5">
 
 #### 13. Own Product
 
