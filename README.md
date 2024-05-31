@@ -19,7 +19,7 @@
 
 ## Deskripsi
 
-Website Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian Organik Langsung Kepada Konsumen
+Aplikasi Berbasis Web Yang Memfasilitasi Petani Dalam Menjual Produk Pertanian Organik Langsung Kepada Konsumen, Menawarkan Transparansi Harga Pasar Untuk Penetapan Harga Yang Kompetitif, Mengeliminasi Perantara Untuk Memastikan Harga Yang Adil Dan Pembayaran Tepat Waktu, Serta Menyediakan Panduan Pengiriman Dan Penyimpanan Untuk Menjaga Kualitas Produk.
 
 #### Dikembangkan dengan Bahasa Pemrograman
 
